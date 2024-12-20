@@ -1,0 +1,134 @@
+/* General */
+body {
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background: linear-gradient(135deg, #ffffff, #f0f0f0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: background-color 0.5s ease;
+}
+
+.container {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+}
+
+.container.menu {
+    margin-bottom: 40px;
+}
+
+#infoPanel {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    color: #555555;
+}
+
+/* Título */
+h1 {
+    color: #222222;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+/* Inputs y botones */
+input, select, button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    margin: 10px 0;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    color: #333333;
+}
+
+input:focus, select:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+button {
+    background-color: #ffffff;
+    color: #007bff;
+    border: 2px solid #007bff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+/* Tablero circular */
+.circle-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: #969090;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+
+/* Segmentos */
+.segment {
+    position: absolute;
+    width: 42%;
+    height: 42%;
+    background-color: #ffffff;
+    border: 2px solid #cccccc;
+    border-radius: 50%;
+    transition: transform 0.2s ease, filter 0.3s ease;
+}
+
+/* Posiciones originales */
+.segment.red {
+    top: 5%;
+    left: 50%;
+    border-top-right-radius: 300px;
+}
+
+.segment.green {
+    top: 5%;
+    left: 5%;
+    border-top-left-radius: 300px;
+}
+
+.segment.yellow {
+    bottom: 5%;
+    left: 5%;
+    border-bottom-left-radius: 300px;
+}
+
+.segment.blue {
+    bottom: 5%;
+    left: 50%;
+    border-bottom-right-radius: 300px;
+}
+
+/* Interacción */
+.segment:hover {
+    filter: brightness(0.9);
+    transform: scale(1.05);
+}
+
+.segment.active {
+    filter: brightness(2.0);
+    transform: scale(1.1);
+    transition: all 0.5s ease;
+}

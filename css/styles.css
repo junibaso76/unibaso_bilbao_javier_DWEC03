@@ -1,0 +1,202 @@
+/* General */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #007bff, #00d4ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: background-color 0.5s ease;
+}
+
+.container {
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 400px;
+}
+
+.container.menu{
+    margin-bottom: 40px;
+    
+}
+
+.error {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+#infoPanel {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+/* Título */
+h1 {
+    color: #333;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+/* Inputs y botones */
+input, select, button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+input:focus, select:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+button {
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Login Box */
+.login-box {
+    text-align: center;
+}
+
+.login-box h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.info {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Welcome Box */
+.welcome-box p {
+    color: #555;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+/* Game Box */
+.game-box {
+    text-align: center;
+}
+
+#infoPanel {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+/* Tablero circular */
+.circle-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: black;
+    margin: 0 auto; /* Asegura que esté centrado horizontalmente */
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+
+
+
+/* Segmentos */
+.segment {
+    position: absolute;
+    width: 42%;
+    height: 42%;
+    background-color: transparent;
+    border: 5px solid black;
+    border-radius: 50%;
+    transition: transform 0.2s ease, filter 0.3s ease;
+}
+
+/* Colores y posiciones */
+.segment.red {
+    background-color: red;
+    top: 5%;
+    left: 50%;
+    border-top-right-radius: 300px;
+}
+
+.segment.green {
+    background-color: green;
+    top: 5%;
+    left: 5%;
+    border-top-left-radius: 300px;
+}
+
+.segment.yellow {
+    background-color: yellow;
+    bottom: 5%;
+    left: 5%;
+    border-bottom-left-radius: 300px;
+}
+
+.segment.blue {
+    background-color: blue;
+    bottom: 5%;
+    left: 50%;
+    border-bottom-right-radius: 300px;
+
+}
+
+/* Hover e interacción */
+.segment:hover {
+    filter: brightness(1.2);
+    transform: scale(1.05);
+}
+
+.segment.active {
+    filter: brightness(2.0);
+    transform: scale(1.1);
+    transition: all 0.5s ease;
+}
+
+
+/* Results Box */
+.results-box p {
+    font-size: 1.2rem;
+    color: #555;
+    margin: 15px 0;
+}
+
+.results-box button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.results-box button:hover {
+    background-color: #0056b3;
+}

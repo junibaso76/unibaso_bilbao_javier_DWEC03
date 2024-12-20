@@ -1,0 +1,137 @@
+/* General */
+body {
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    background: linear-gradient(135deg, #555555, #aaaaaa);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 400px;
+}
+
+.container.menu {
+    margin-bottom: 40px;
+}
+
+#infoPanel {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    color: #333333;
+}
+
+/* Título */
+h1 {
+    color: #444444;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+/* Inputs y botones */
+input, select, button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    margin: 10px 0;
+    border: 1px solid #999999;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #e6e6e6;
+    color: #333333;
+}
+
+input:focus, select:focus {
+    border-color: #888888;
+    outline: none;
+    box-shadow: 0 0 5px rgba(136, 136, 136, 0.5);
+}
+
+button {
+    background-color: #777777;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #555555; 
+}
+
+/* Tablero circular */
+.circle-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 1px solid grey;
+    background-color: #f2f2f2;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+
+/* Segmentos */
+.segment {
+    position: absolute;
+    width: 42%;
+    height: 42%;
+    background-color: #cccccc;
+    border: 5px solid #888888;
+    border-radius: 50%;
+    transition: transform 0.2s ease, filter 0.3s ease;
+}
+
+/* Posiciones originales */
+.segment.red {
+    background-color: #e2d8d8; 
+    top: 5%;
+    left: 50%;
+    border-top-right-radius: 300px;
+}
+
+.segment.green {
+    background-color: #cccccc; /* Claro */
+    top: 5%;
+    left: 5%;
+    border-top-left-radius: 300px;
+}
+
+.segment.yellow {
+    background-color: #888888; /* Medio */
+    bottom: 5%;
+    left: 5%;
+    border-bottom-left-radius: 300px;
+}
+
+.segment.blue {
+    background-color: #444444; /* Oscuro */
+    bottom: 5%;
+    left: 50%;
+    border-bottom-right-radius: 300px;
+}
+
+/* Interacción */
+.segment:hover {
+    filter: brightness(1.2);
+    transform: scale(1.05);
+}
+
+.segment.active {
+    filter: brightness(2.0);
+    transform: scale(1.1);
+    transition: all 0.5s ease;
+}

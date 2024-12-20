@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenida - Juego Simón</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <main>
+        <div class="container">
+            <h1>Bienvenido al Juego Simón <p id="bienvenida"></p></h1>
+            <p>Selecciona tus opciones y empieza a jugar:</p>
+            <label for="level">Nivel de Dificultad:</label>
+            <select id="level">
+                <option value="easy">Fácil</option>
+                <option value="medium">Intermedio</option>
+                <option value="hard">Difícil</option>
+            </select>
+            <label for="colors">Colores del Tablero:</label>
+            <select id="colors">
+                <option value="default">Color</option>
+                <option value="grayscale">Escala de Grises</option>
+                <option value="whitescale">Blanco</option>
+            </select>
+            <button id="start-game">Comenzar Juego</button>
+        </div>
+    </main>
+    <script src="../js/jquery-3.7.1.min.js" type="text/javascript"></script>
+    <script src="../js/welcome.js"></script>
+</body>
+</html>

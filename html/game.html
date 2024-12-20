@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego Simón</title>
+    <link id="stylesheet" rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <main>
+        <div class="container">
+            <h1>Zona de Juego</h1>
+            <div id="infoPanel">
+                <p>Puntuación: <span id="score">0</span></p>
+                <p>Tiempo Restante: <span id="timer">100</span> segundos</p><br>
+            </div>
+            <div>
+                <p id="infoJuego"></p>
+            </div>
+            <div class="circle-container">
+                <div class="segment red" data-color="red"></div>
+                <div class="segment green" data-color="green"></div>
+                <div class="segment yellow" data-color="yellow"></div>
+                <div class="segment blue" data-color="blue"></div>
+            </div>
+        </div>
+    </main>
+    <script src="../js/jquery-3.7.1.min.js" type="text/javascript"></script>
+    <script src="../js/game.js"></script>
+</body>
+</html>
