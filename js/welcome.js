@@ -56,6 +56,28 @@ $(document).ready(function () {
             alert("¡Presionaste Enter! ¿Listo para comenzar? Pulsa en Comenzar Juego");
         }
     });
+
+    // Script para hacer el texto desplazable
+    $(document).ready(function () {
+        const $instructions = $("#instructions");
+        const containerWidth = $("#instructions-container").width();
+        let textWidth = $instructions.width();
+        let position = containerWidth;
+
+        function scrollInstructions() {
+            position -= 1; // Velocidad del desplazamiento
+            if (position < -textWidth) {
+                position = containerWidth; // Reinicia la posición
+            }
+            $instructions.css("left", position + "px");
+            requestAnimationFrame(scrollInstructions);
+        }
+
+        // Ajusta el ancho del texto al cargar
+        textWidth = $instructions.width();
+        scrollInstructions();
+    });
+
     // Fade-in para la carga inicial de la página
     $("body").hide().fadeIn(500);
   

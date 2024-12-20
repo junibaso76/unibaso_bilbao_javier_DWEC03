@@ -15,7 +15,14 @@ $(document).ready(function () {
             return;
         }
 
-        // Realiza una solicitud AJAX para obtener los datos del archivo JSON
+        // Validación de la contraseña con RegExp
+        const alphanumericRegex = /^[a-zA-Z0-9]+$/; // Solo letras y números
+        if (!alphanumericRegex.test(password)) {
+            $("#error-message").text("La contraseña solo puede contener letras y números.");
+            return;
+        }
+
+        // Realiza una solicitud para obtener los datos del archivo JSON
         $.getJSON("/data/usuarios.json", function (usuarios) {
             const usuario = usuarios.find(user => user.usuario === username);
 

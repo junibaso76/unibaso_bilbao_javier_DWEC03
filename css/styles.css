@@ -200,3 +200,17 @@ button:hover {
 .results-box button:hover {
     background-color: #0056b3;
 }
+
+/* Estilo para el contenedor del texto desplazable */
+#instructions-container {
+    overflow: hidden;
+    height: 30px;
+    position: relative;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+#instructions {
+    position: absolute;
+    white-space: nowrap;
+}
